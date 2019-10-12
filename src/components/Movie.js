@@ -8,7 +8,7 @@ class Movie extends Component {
         return (this.props.catalog.map(c =>
                     <div key={c.id} className="movie">
                         <Link to={`/movie/${c.id}`}>{
-                            <div id="movie" ><img src={c.img} alt={c.title} width="300" height="300"></img><h4>{c.title}</h4></div>}</Link>
+                            <div id="movie" ><img src={c.img} alt={c.title} width="200" height="200"></img><h4>{c.title}</h4></div>}</Link>
                     </div>)
             )
     }

@@ -1,18 +1,19 @@
 import React, { Component } from 'react'
 
-import '../styles/Movie.css'
+import '../styles/MovieDetail.css'
 
 class MovieDetail extends Component {
 
     render() {
-        const match = this.props.match
-        console.log("match:", match)
-
-        console.log(this.props)
-
+        const matchID = this.props.match.params.id
+        const catalog = this.props.catalog[matchID]
         return (
             <div>
-            </div>)
+                <h3>{catalog.title} ({catalog.year})</h3>
+                <img src={catalog.img} alt={catalog.title} width="200" height="300" />
+                <p>{catalog.descrShort}</p>
+            </div>
+        )
     }
 }
 
