@@ -3,7 +3,6 @@ import logo from './Reflix_logo.png'
 import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom'
 import Landing from './components/Landing'
 import Catalog from './components/Catalog'
-import Movie from './components/Movie'
 import MovieDetail from './components/MovieDetail'
 
 import './App.css'
@@ -34,8 +33,7 @@ class App extends Component {
             <Redirect to="/" />
           </div>
           <Route path="/" exact component={Landing} />
-          <Route path="/catalog" exact component={Catalog} />
-          <Route path="/movie" exact component={Movie} />
+          <Route path="/catalog" exact render={() => <Catalog catalog={this.state.catalog} />} />
           <Route path="/movie/:id" exact render={({ match }) => <MovieDetail match={match} catalog={this.state.catalog} />} />
 
         </div></Router>
