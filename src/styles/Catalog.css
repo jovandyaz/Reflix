@@ -1,5 +1,13 @@
-.movies{
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(3, 1fr);
+
+.catalog-container {
+  margin: 5vh;
+  display: grid;
+  grid-gap: 10px;
+  grid-template: 4fr 4fr;
+}
+
+.movies {
+  display: grid;
+  grid-gap: 10px;
+  grid-template: 1fr 1fr;
 }

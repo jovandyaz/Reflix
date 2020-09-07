@@ -1,4 +1,33 @@
-.movie{
+  .imageButtonContainer {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+
+  .imageButtonContainer img {
     display: grid;
     grid-gap: 10px;
-}
+    width: 200px;
+    height: 200px;
+  }
+
+  .imageButtonContainer button {
+    position: absolute;
+    top: 30px;
+    right: 5px;
+    height: 30px;
+    width: 30px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    vertical-align: center;
+    font-size: 100%;
+    border: none;
+    border-radius: 20%;
+    cursor: pointer;
+  }
+
+  .imageButtonContainer button:hover {
+    background-color: white;
+    color: black;
+  }
